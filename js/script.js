@@ -38,6 +38,11 @@ createApp({
             autoPlay: null,
         }
     },
+
+    created() {
+        this.startAutoPlay();
+    },
+
     methods: {
         changeImg(index) {
             this.itemsActive = index;
@@ -60,11 +65,11 @@ createApp({
         startAutoPlay() {
             this.autoPlay = setInterval(() => {
                 this.next();
-            }, 3000)
+            }, 300)
         },
 
         stopAutoPlay() {
             clearInterval(this.autoPlay)
-        }
+        },
     }
 }).mount('#app')

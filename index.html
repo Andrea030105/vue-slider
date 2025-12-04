@@ -27,7 +27,7 @@
                             <button @click="next" id="btn-top" class=" my-2 position-absolute start-50 top-0">
                                 <i class="fa-solid fa-arrow-right"></i>
                             </button>
-                            <div class="container-img">
+                            <div @mouseenter="stopAutoPlay" @mouseleave="startAutoPlay" class="container-img">
                                 <img :src="imgArray[itemsActive].urlImg">
                                 <h3>{{imgArray[itemsActive].titolo}}</h3>
                                 <p>{{imgArray[itemsActive].desc}}</p>
