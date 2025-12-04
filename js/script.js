@@ -32,7 +32,10 @@ createApp({
                     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, fuga tenetur."
                 },
             ],
+
             itemsActive: 0,
+
+            autoPlay: null,
         }
     },
     methods: {
@@ -52,6 +55,16 @@ createApp({
             if (this.itemsActive < 0) {
                 this.itemsActive = this.imgArray.length - 1
             }
+        },
+
+        startAutoPlay() {
+            this.autoPlay = setInterval(() => {
+                this.next();
+            }, 3000)
+        },
+
+        stopAutoPlay() {
+            clearInterval(this.autoPlay)
         }
     }
 }).mount('#app')

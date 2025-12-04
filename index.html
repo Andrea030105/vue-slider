@@ -36,10 +36,10 @@
                                 <i class="fa-solid fa-arrow-left"></i>
                             </button>
                             <div class="container-autoplay">
-                                <button id="play">
+                                <button @click="startAutoPlay" id="play">
                                     <i class="fa-solid fa-play"></i>
                                 </button>
-                                <button id="stop" class="mx-3">
+                                <button @click="stopAutoPlay" id="stop" class="mx-3">
                                     <i class="fa-solid fa-stop"></i>
                                 </button>
                                 <button id="reverse">
