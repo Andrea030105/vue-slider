@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects-arrey</title>
+    <link rel="shortcut icon" href="./img/icon-carousel.png" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col vh-100 d-flex align-items-center">
+                <div class="content d-flex">
+                    <div class="big-img position-relative">
+                        <button id="btn-top" class=" my-2 position-absolute start-50 top-0">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <div class="container-img">
+                            <img :src="{{imgArray.urlImg}}">
+                            <h3>{{imgArray.titolo}}</h3>
+                            <p>{{imgArray.desc}}</p>
+                        </div>
+                        <button id="btn-bottom" class=" my-2 position-absolute bottom-0 end-50">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <div class="container-autoplay">
+                            <button id="play">
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+                            <button id="stop" class="mx-3">
+                                <i class="fa-solid fa-stop"></i>
+                            </button>
+                            <button id="reverse">
+                                <i class="fa-solid fa-backward"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="thumbnail">
+                        <div class="container-img-thumbnail opacity-thumbnail">
+                            <img id="img-${i}" src="${element.urlImg}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VUE JE -->
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- BOOTSTRAP JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- JS -->
+
+    <script type="text/javascript" src="./js/script.js"></script>
+
+</body>
+
+</html>
